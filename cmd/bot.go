@@ -15,7 +15,7 @@ func main() {
 	go func() {
 		log.Println("Starting listener")
 		time.Sleep(shutdownTimeout * time.Second)
-		log.Printf("Exiting listener after %d seconds\n", shutdownTimeout)
+		log.Printf("Shutting down listener after %d seconds\n", shutdownTimeout)
 		os.Exit(0)
 	}()
 
