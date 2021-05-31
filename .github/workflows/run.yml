@@ -5,8 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-
-  build:
+  run bot:
     runs-on: ubuntu-latest
     steps:
       - name: Run the telegram bot
