@@ -9,7 +9,7 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
-const shutdownTimeout = 60
+const shutdownTimeout = 3600
 
 func main() {
 	go func() {
