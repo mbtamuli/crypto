@@ -8,10 +8,11 @@ builds:
       - linux
     goarch:
       - amd64
-    binary: tgbot
+    binary: telegram-bot
     dir: cmd
 archives:
   - format: binary
+    name_template: "{{ .Binary }}_{{ .Os }}_{{ .Arch }}"
 checksum:
   name_template: 'checksums.txt'
 snapshot:

@@ -59,7 +59,7 @@ func main() {
 func getAPIToken(key string) (string, error) {
 	val, ok := os.LookupEnv(key)
 	if !ok {
-		return "", fmt.Errorf("environment variable not set")
+		return "", fmt.Errorf("environment variable `%s` not set", key)
 	}
 	return val, nil
 }
