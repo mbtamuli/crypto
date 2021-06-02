@@ -6,10 +6,11 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
+      - darwin
     goarch:
       - amd64
     binary: telegram-bot
-    dir: cmd
+    dir: cmd/bot
 archives:
   - format: binary
     name_template: "{{ .Binary }}_{{ .Os }}_{{ .Arch }}"

@@ -1,2 +1,4 @@
-bot
+telegram-bot-cli
+!telegram-bot-cli/
 dist/
+data/telegram.sqlite

@@ -3,15 +3,31 @@ name: Run
 on:
   schedule:
     - cron:  '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   run_bot:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Run the telegram bot
         run: |
+          make decrypt-database
           curl -fsSLo telegram-bot https://github.com/mbtamuli/didactic-train/releases/latest/download/telegram-bot_linux_amd64
           chmod +x telegram-bot
           ./telegram-bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+      
+      - name: Commit database
+        run: |
+          make encrypt-database
+          git config user.name "techfreak-bot"
+          git config user.email "34467411+techfreak-bot@users.noreply.github.com"
+          git add data/telegram.sqlite.gpg
+          git commit -m "Update database"
+          git push
+        env:
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
