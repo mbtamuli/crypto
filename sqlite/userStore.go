@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
-	"github.com/mbtamuli/telegram-bot/model"
+	"github.com/mbtamuli/crypto/model"
 )
 
 type UserStore struct {

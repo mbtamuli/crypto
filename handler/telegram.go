@@ -7,7 +7,7 @@ import (
 	"strconv"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
-	"github.com/mbtamuli/telegram-bot/sqlite"
+	"github.com/mbtamuli/crypto/sqlite"
 )
 
 func Handler(store *sqlite.Store) {

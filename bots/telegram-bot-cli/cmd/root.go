@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mbtamuli/telegram-bot/sqlite"
+	"github.com/mbtamuli/crypto/sqlite"
 	"github.com/spf13/cobra"
 )
 

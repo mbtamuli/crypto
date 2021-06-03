@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/mbtamuli/telegram-bot/model"
+	"github.com/mbtamuli/crypto/model"
 	"github.com/spf13/cobra"
 )
 
