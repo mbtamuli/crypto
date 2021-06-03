@@ -31,4 +31,4 @@ migrate-down:
 		down
 
 cli:
-	go build -o telegram-bot-cli cmd/telegram-bot-cli/main.go
+	go build -o telegram-users-cli cmd/telegram-users-cli/main.go

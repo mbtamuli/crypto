@@ -18,9 +18,9 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "telegram-bot-cli",
-	Short: "telegram-bot-cli gives the ability to create, update, delete users",
-	Long:  "telegram-bot-cli gives the ability to create, update, delete users",
+	Use:   "telegram-users-cli",
+	Short: "telegram-users-cli gives the ability to create, update, delete users",
+	Long:  "telegram-users-cli gives the ability to create, update, delete users",
 }
 
 func Execute() {

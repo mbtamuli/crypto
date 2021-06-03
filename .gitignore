@@ -1,4 +1,4 @@
-telegram-bot-cli
-!telegram-bot-cli/
+telegram-users-cli
+!telegram-users-cli/
 dist/
 data/telegram.sqlite
