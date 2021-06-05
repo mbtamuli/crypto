@@ -9,8 +9,8 @@ builds:
       - darwin
     goarch:
       - amd64
-    binary: telegram-bot
-    dir: cmd/bot
+    binary: binance-bot
+    dir: bots/binance-bot
 archives:
   - format: binary
     name_template: "{{ .Binary }}_{{ .Os }}_{{ .Arch }}"
