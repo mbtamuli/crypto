@@ -1,9 +1,19 @@
 package cmd
 
 import (
+	"log"
+
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+
+	"github.com/kelseyhightower/envconfig"
 )
+
+type Config struct {
+	ApiKey    string `split_words:"true"`
+	SecretKey string `split_words:"true"`
+}
+
+var s Config
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -21,8 +31,10 @@ func init() {
 	cobra.OnInitialize(initConfig)
 }
 
-// initConfig reads in config file and ENV variables if set.
+// initConfig reads ENV variables if set.
 func initConfig() {
-	viper.SetEnvPrefix("bbot")
-	viper.AutomaticEnv() // read in environment variables that match
+	err := envconfig.Process("bbot", &s)
+	if err != nil {
+		log.Fatal(err.Error())
+	}
 }

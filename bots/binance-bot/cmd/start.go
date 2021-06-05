@@ -12,7 +12,9 @@ var startCmd = &cobra.Command{
 	Short: "Start the binance-bot",
 	Long:  "Start the binance-bot",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("start called")
+		fmt.Println("Running the start command")
+		fmt.Println(s.ApiKey)
+		fmt.Println(s.SecretKey)
 	},
 }
 
