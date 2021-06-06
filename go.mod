@@ -3,6 +3,8 @@ module github.com/mbtamuli/crypto
 go 1.15
 
 require (
+	github.com/adshao/go-binance/v2 v2.2.2
+	github.com/davecgh/go-spew v1.1.1
 	github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
 	github.com/google/uuid v1.2.0
 	github.com/jmoiron/sqlx v1.3.4
